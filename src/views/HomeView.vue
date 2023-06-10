@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
@@ -10,6 +9,7 @@ import TheWelcome from '../components/TheWelcome.vue'
                   <h1 class="lg:text-7xl text-3xl font-bold underline text-primary">
                       Hello, I'm Angelo!
                   </h1>
+                  <button type="button">Download CSV</button>
               </div>
               <img src="@/assets/angeloimg.png">
           </div>

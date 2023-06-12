@@ -6,10 +6,10 @@
       <div>
           <div class="image">
               <div class="lg:ml-10">
-                  <h1>
+                  <h1 class="mb-10">
                       Hello, I'm Angelo!
                   </h1>
-                  <button type="button">Download CSV</button>
+                  <a href="src/assets/Angelo_Resume.pdf" download="Angelo_Resume.pdf" class="download">Download CSV</a>
               </div>
               <img class="banner" src="@/assets/angeloimg.png">
           </div>
@@ -53,5 +53,11 @@ h1 {
 .about-me-image {
     @apply bg-secondary rounded;
     border-radius: 500px;
+}
+.download {
+    @apply text-neutral text-lg;
+    border: #66FCF1 1px solid;
+    border-radius: 100px;
+    padding: 1rem;
 }
 </style>

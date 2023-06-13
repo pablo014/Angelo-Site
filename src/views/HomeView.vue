@@ -19,8 +19,21 @@
                       <img class="about-me-image" src="@/assets/side-profile-removebg-preview.png"/>
                   </div>
               </div>
-              <div class="col-span-8">
+              <div class="col-span-7 ml-4">
                   <h1>About Me</h1>
+                  <p class="text-lg">I am a passionate and dedicated Frontend Developer with a strong focus on creating seamless user experiences and visually appealing web applications. With a solid foundation in HTML, CSS, and JavaScript, I thrive on turning design concepts into functional and interactive interfaces.
+
+                      Throughout my career, I have had the opportunity to collaborate with cross-functional teams, including designers and backend developers, to deliver high-quality projects that exceed client expectations. I take pride in my ability to understand user needs and translate them into intuitive and engaging frontend solutions.
+
+                      Constantly seeking to expand my skill set, I stay updated with the latest trends and technologies in frontend development. I am proficient in working with modern frameworks such as React.js, Angular, or Vue.js, which allow me to streamline development processes and create scalable and maintainable code.
+
+                      Attention to detail is one of my strengths, and I always strive for pixel-perfect implementations. I am experienced in working with responsive design principles, ensuring that websites and applications are visually consistent and accessible across various devices and screen sizes.
+
+                      In addition to my technical expertise, I am a strong believer in teamwork and effective communication. I thrive in collaborative environments where I can contribute my ideas, learn from others, and collectively achieve project success.
+
+                      As a frontend developer, I am driven by the desire to continuously learn, innovate, and push the boundaries of what is possible in the digital space. I am excited about the opportunity to contribute my skills and creativity to projects that make a meaningful impact and provide exceptional user experiences.
+
+                      Let's connect and discuss how we can collaborate to create remarkable frontend solutions together.</p>
               </div>
           </div>
       </div>

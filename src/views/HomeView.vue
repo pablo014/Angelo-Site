@@ -13,14 +13,14 @@
               </div>
               <img class="banner" src="@/assets/angeloimg.png">
           </div>
-          <div class="grid grid-cols-12">
+          <div class="grid grid-cols-12 my-10">
               <div class="col-span-4">
                   <div class="border">
                       <img class="about-me-image" src="@/assets/side-profile-removebg-preview.png"/>
                   </div>
               </div>
               <div class="col-span-7 ml-4">
-                  <h1>About Me</h1>
+                  <h1 class="mb-5">About Me</h1>
                   <p class="text-lg">I am a passionate and dedicated Frontend Developer with a strong focus on creating seamless user experiences and visually appealing web applications. With a solid foundation in HTML, CSS, and JavaScript, I thrive on turning design concepts into functional and interactive interfaces.
 
                       Throughout my career, I have had the opportunity to collaborate with cross-functional teams, including designers and backend developers, to deliver high-quality projects that exceed client expectations. I take pride in my ability to understand user needs and translate them into intuitive and engaging frontend solutions.
@@ -35,6 +35,9 @@
 
                       Let's connect and discuss how we can collaborate to create remarkable frontend solutions together.</p>
               </div>
+          </div>
+          <div>
+              <h1>Experience</h1>
           </div>
       </div>
   </main>
@@ -61,7 +64,7 @@ h1 {
     border-radius: 500px;
     background: linear-gradient(to bottom, #1F2833,#0B0C10, #66FCF1, #45A29E);
     padding: .25rem;
-    margin: 1rem;
+    margin: 5rem 1rem 1rem;
 }
 .about-me-image {
     @apply bg-secondary rounded;

@@ -1,4 +1,31 @@
 <script setup lang="ts">
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+interface Experience {
+    name: string,
+    image: string,
+    description: string,
+    position: string,
+};
+const experience: Array<Experience> = [{
+    name: 'ArroyoDev',
+    image: 'src/assets/arroyodevLogo.png',
+    description: 'test',
+    position: 'Frontend Developer',
+},
+    {
+        name: 'Ullrich Insurance',
+        image: 'src/assets/ullrichLogo.jpg',
+        description: 'test',
+        position: 'Software Developer',
+    },
+    {
+        name: 'WeCare Insurance',
+        image: 'src/assets/weCareLogo.png',
+        description: 'test',
+        position: 'Project Manager'
+    }
+]
 </script>
 
 <template>
@@ -38,6 +65,20 @@
           </div>
           <div>
               <h1>Experience</h1>
+              <carousel :items-to-show="1.5">
+                  <slide v-for="(item, index) in experience" :key="index">
+                      <div class="flex flex-col justify-center">
+                          <h1 class="py-4">{{ item.name }}</h1>
+                          <img :src="item.image" class="slideImg" />
+                          <p></p>
+                      </div>
+                  </slide>
+
+                  <template #addons>
+                      <navigation />
+                      <pagination />
+                  </template>
+              </carousel>
           </div>
       </div>
   </main>
@@ -75,5 +116,8 @@ h1 {
     border: #66FCF1 1px solid;
     border-radius: 100px;
     padding: 1rem;
+}
+.slideImg {
+    height: 30rem;
 }
 </style>

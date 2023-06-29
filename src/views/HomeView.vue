@@ -4,25 +4,37 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 interface Experience {
     name: string,
     image: string,
-    description: string,
+    description: Array<string>,
     position: string,
 };
 const experience: Array<Experience> = [{
     name: 'ArroyoDev',
     image: 'src/assets/arroyodevLogo.png',
-    description: 'test',
+    description: [
+        'Collaborate with cross-functional teams including designers and backend developers to create visually appealing and user-friendly web applications.',
+        'Develop and maintain responsive websites using HTML, CSS, and JavaScript, ensuring compatibility across various browsers and devices.',
+        'Utilize modern frontend frameworks, such as React.js, Angular, or Vue.js, to streamline development processes and improve code maintainability.'
+    ],
     position: 'Frontend Developer',
 },
     {
         name: 'Ullrich Insurance',
         image: 'src/assets/ullrichLogo.jpg',
-        description: 'test',
+        description: [
+            'Participated in team meetings and contributed ideas for improving frontend development processes and workflows.',
+            'Improved the process of sending and receiving claims by creating software that is simple and friendly to use',
+            'Stay up-to-date with the latest industry trends, best practices, and emerging technologies in frontend development, and actively share knowledge with the team.'
+        ],
         position: 'Software Developer',
     },
     {
         name: 'WeCare Insurance',
         image: 'src/assets/weCareLogo.png',
-        description: 'test',
+        description: [
+            'Implemented Scrum and Agile Methodologies to communicate project plans with teammates',
+            'Automated user processes by creating efficient and well designed applications',
+            'Assisted in the optimization of website performance through code refactoring and asset optimization techniques.'
+        ],
         position: 'Project Manager'
     }
 ]
@@ -33,20 +45,20 @@ const experience: Array<Experience> = [{
       <div>
           <div class="image">
               <div class="lg:ml-10">
-                  <h1 class="mb-10">
+                  <h1>
                       Hello, I'm Angelo!
                   </h1>
                   <a href="src/assets/Angelo_Resume.pdf" download="Angelo_Resume.pdf" class="download">Download CSV</a>
               </div>
               <img class="banner" src="@/assets/angeloimg.png">
           </div>
-          <div class="grid grid-cols-12 my-10">
-              <div class="col-span-4">
+          <div class="grid sm:grid-cols-12 my-10">
+              <div class="sm:col-span-4">
                   <div class="border">
                       <img class="about-me-image" src="@/assets/side-profile-removebg-preview.png"/>
                   </div>
               </div>
-              <div class="col-span-7 ml-4">
+              <div class="sm:col-span-7 ml-4">
                   <h1 class="mb-5">About Me</h1>
                   <p class="text-lg">I am a passionate and dedicated Frontend Developer with a strong focus on creating seamless user experiences and visually appealing web applications. With a solid foundation in HTML, CSS, and JavaScript, I thrive on turning design concepts into functional and interactive interfaces.
 
@@ -63,19 +75,21 @@ const experience: Array<Experience> = [{
                       Let's connect and discuss how we can collaborate to create remarkable frontend solutions together.</p>
               </div>
           </div>
-          <div>
+          <div class="sm:mx-10 mx-4">
               <h1>Experience</h1>
-              <carousel :items-to-show="1.5">
+              <carousel :items-to-show="1">
                   <slide v-for="(item, index) in experience" :key="index">
-                      <div class="flex flex-col justify-center">
+                      <div class="flex flex-col justify-center p-5">
                           <img :src="item.image" class="slideImg" />
                           <AccordionList class="bg-black">
-                              <AccordionItem class="bg-black" :id="index">
+                              <AccordionItem class="bg-black accordion-container" :id="index">
                                   <template #summary>
                                       <h1 class="py-4">{{ item.name }}</h1>
                                   </template>
                                   <h2>{{ item.position }}</h2>
-                                  <p>{{item.description}}</p>
+                                  <li>
+                                      <ul v-for="d in item.description">{{ d }}</ul>
+                                  </li>
                               </AccordionItem>
                           </AccordionList>
                       </div>
@@ -106,7 +120,7 @@ const experience: Array<Experience> = [{
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 }
 h1 {
-    @apply lg:text-7xl text-3xl font-bold text-primary;
+    @apply lg:text-7xl text-3xl font-bold text-primary mb-10;
 }
 .border {
     border-radius: 500px;
@@ -125,6 +139,15 @@ h1 {
     padding: 1rem;
 }
 .slideImg {
-    height: 30rem;
+    height: 40rem;
+    @media only screen and (max-width: 600px) {
+        height: 20rem;
+    }
+}
+.accordion-container {
+    width: 50rem;
+    @media only screen and (max-width: 600px) {
+        width: 20rem;
+    }
 }
 </style>

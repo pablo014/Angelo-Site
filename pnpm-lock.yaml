@@ -27,6 +27,7 @@ specifiers:
   vue-router: ^4.1.6
   vue-tsc: ^1.2.0
   vue3-carousel: ^0.3.1
+  vue3-rich-accordion: ^0.0.7
   vueperslides: ^3.5.1
 
 dependencies:
@@ -36,6 +37,7 @@ dependencies:
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
   vue3-carousel: 0.3.1_vue@3.2.47
+  vue3-rich-accordion: 0.0.7_vue@3.2.47
   vueperslides: 3.5.1_vue@3.2.47
 
 devDependencies:
@@ -3425,6 +3427,14 @@ packages:
     resolution: {integrity: sha512-86vUkNPBzL2PVuR9w6hUsI90ccFjLp+K8cSFpRTISf+SjUQY3fMHc5CFF5MUL62v1xYYm27zEBmQupO9VQx9Kw==}
     peerDependencies:
       vue: ^3.2.0
+    dependencies:
+      vue: 3.2.47
+    dev: false
+
+  /vue3-rich-accordion/0.0.7_vue@3.2.47:
+    resolution: {integrity: sha512-DWq5PHx3vbohgOVLAqxi2JxX3zSPB6ka73ypesy6XxH5btZQs4fnCN5sNOidj6SoBT6fDS5OivevY5ZA+oYWhA==}
+    peerDependencies:
+      vue: ^3.2.31
     dependencies:
       vue: 3.2.47
     dev: false

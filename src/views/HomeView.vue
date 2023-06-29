@@ -68,9 +68,16 @@ const experience: Array<Experience> = [{
               <carousel :items-to-show="1.5">
                   <slide v-for="(item, index) in experience" :key="index">
                       <div class="flex flex-col justify-center">
-                          <h1 class="py-4">{{ item.name }}</h1>
                           <img :src="item.image" class="slideImg" />
-                          <p></p>
+                          <AccordionList class="bg-black">
+                              <AccordionItem class="bg-black" :id="index">
+                                  <template #summary>
+                                      <h1 class="py-4">{{ item.name }}</h1>
+                                  </template>
+                                  <h2>{{ item.position }}</h2>
+                                  <p>{{item.description}}</p>
+                              </AccordionItem>
+                          </AccordionList>
                       </div>
                   </slide>
 

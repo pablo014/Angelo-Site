@@ -43,7 +43,10 @@ const experience: Array<Experience> = [{
 <template>
   <main>
       <div>
-          <div class="image">
+          <div class="bg-gradient-to-l from-primarydark to-secondary sticky top-0 z-10">
+              <div>test</div>
+          </div>
+          <div class="image" id="banner">
               <div class="lg:ml-10">
                   <h1>
                       Hello, I'm Angelo!
@@ -52,7 +55,7 @@ const experience: Array<Experience> = [{
               </div>
               <img class="banner" src="@/assets/angeloimg.png">
           </div>
-          <div class="grid sm:grid-cols-12 my-10">
+          <div class="grid sm:grid-cols-12 my-10" id="about_me">
               <div class="sm:col-span-4">
                   <div class="border">
                       <img class="about-me-image" src="@/assets/side-profile-removebg-preview.png"/>
@@ -75,7 +78,7 @@ const experience: Array<Experience> = [{
                       Let's connect and discuss how we can collaborate to create remarkable frontend solutions together.</p>
               </div>
           </div>
-          <div class="sm:mx-10 mx-4">
+          <div class="sm:mx-10 mx-4" id="experience">
               <h1>Experience</h1>
               <carousel :items-to-show="1">
                   <slide v-for="(item, index) in experience" :key="index">

@@ -38,15 +38,36 @@ const experience: Array<Experience> = [{
         position: 'Project Manager'
     }
 ]
+const headerList = [
+    {
+        name: 'Home',
+        id: 'home',
+    },
+    {
+        name: 'About Me',
+        id: 'about_me',
+    },
+    {
+        name: 'Experience',
+        id: 'experience',
+    }
+]
+const scrollIntoView = (id) => {
+    document.getElementById(id).scrollIntoView({
+        behavior: 'smooth',
+    });
+}
 </script>
 
 <template>
   <main>
       <div>
-          <div class="bg-gradient-to-l from-primarydark to-secondary sticky top-0 z-10">
-              <div>test</div>
+          <div class="header">
+              <a v-for="header in headerList" @click="scrollIntoView(header.id)" class="text-lg px-6">
+                  {{ header.name }}
+              </a>
           </div>
-          <div class="image" id="banner">
+          <div class="image" id="home">
               <div class="lg:ml-10">
                   <h1>
                       Hello, I'm Angelo!
@@ -152,5 +173,8 @@ h1 {
     @media only screen and (max-width: 600px) {
         width: 20rem;
     }
+}
+.header {
+    @apply bg-gradient-to-l from-primarydark to-secondary sticky top-0 z-10;
 }
 </style>

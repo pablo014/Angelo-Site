@@ -2,6 +2,7 @@
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import RadialProgress from "vue3-radial-progress";
+import { useMediaQuery } from '@vueuse/core'
 interface Experience {
     name: string,
     image: string,
@@ -12,6 +13,7 @@ interface Skill {
     name: string,
     knowledge: number
 }
+const isMobile = useMediaQuery('(max-width: 600px)')
 const skills: Array<Skill> = [
     {
         name: "Vue",
@@ -117,11 +119,11 @@ const scrollIntoView = (id) => {
           <div class="skills">
               <div class="sm:mx-10 mx-4">
                   <h1>Skills</h1>
-                  <div class="flex flex-wrap text-xl">
+                  <div class="flex flex-wrap sm:text-xl">
                       <RadialProgress
-                          class="m-10 hover:scale-125 transition-all duration-500"
+                          class="m-5 sm:m-10 hover:scale-125 transition-all duration-500"
                           v-for="skill in skills"
-                          :diameter="200"
+                          :diameter="isMobile ? 130 : 200"
                           :completed-steps="skill.knowledge"
                           :total-steps="10">
                           {{ skill.name }}

@@ -13,6 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@aacassandra/vue3-progressbar": "^1.0.3",
     "@egjs/vue3-flicking": "^4.10.7",
     "pinia": "^2.0.32",
     "primevue": "^3.29.2",

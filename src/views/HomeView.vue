@@ -63,9 +63,12 @@ const scrollIntoView = (id) => {
   <main>
       <div>
           <div class="header">
-              <a v-for="header in headerList" @click="scrollIntoView(header.id)" class="text-lg px-6">
-                  {{ header.name }}
-              </a>
+              <img src="src/assets/AngeloPabloLogo.png" id="logo" />
+              <div class="flex flex-row items-center">
+                  <a v-for="header in headerList" @click="scrollIntoView(header.id)" class="text-2xl px-6 text-secondary">
+                      {{ header.name }}
+                  </a>
+              </div>
           </div>
           <div class="image" id="home">
               <div class="lg:ml-10">
@@ -101,7 +104,7 @@ const scrollIntoView = (id) => {
           </div>
           <div class="sm:mx-10 mx-4" id="experience">
               <h1>Experience</h1>
-              <carousel :items-to-show="1">
+              <carousel :items-to-show="1" wrapAround>
                   <slide v-for="(item, index) in experience" :key="index">
                       <div class="flex flex-col justify-center p-5">
                           <img :src="item.image" class="slideImg" />
@@ -176,5 +179,11 @@ h1 {
 }
 .header {
     @apply bg-gradient-to-l from-primarydark to-secondary sticky top-0 z-10;
+    display: flex;
+    justify-content: space-between;
+}
+#logo {
+    @apply rounded-full;
+    height: 7rem;
 }
 </style>

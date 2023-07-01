@@ -119,7 +119,7 @@ const scrollIntoView = (id) => {
                   <h1>Skills</h1>
                   <div class="flex flex-wrap text-xl">
                       <RadialProgress
-                          class="m-10"
+                          class="m-10 hover:scale-125 transition-all duration-500"
                           v-for="skill in skills"
                           :diameter="200"
                           :completed-steps="skill.knowledge"

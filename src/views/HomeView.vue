@@ -1,12 +1,47 @@
 <script setup lang="ts">
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import RadialProgress from "vue3-radial-progress";
 interface Experience {
     name: string,
     image: string,
     description: Array<string>,
     position: string,
 };
+interface Skill {
+    name: string,
+    knowledge: number
+}
+const skills: Array<Skill> = [
+    {
+        name: "Vue",
+        knowledge: 9,
+    },
+    {
+        name: "HTML",
+        knowledge: 9,
+    },
+    {
+        name: "JavaScript",
+        knowledge: 9,
+    },
+    {
+        name: "CSS",
+        knowledge: 9,
+    },
+    {
+        name: "UI/UX Design",
+        knowledge: 8,
+    },
+    {
+        name: "Angular",
+        knowledge: 6,
+    },
+    {
+        name: "React",
+        knowledge: 6,
+    }
+]
 const experience: Array<Experience> = [{
     name: 'ArroyoDev',
     image: 'src/assets/arroyodevLogo.png',
@@ -64,7 +99,7 @@ const scrollIntoView = (id) => {
       <div>
           <div class="header">
               <img src="src/assets/AngeloPabloLogo.png" id="logo" />
-              <div class="flex flex-row items-center">
+              <div class="sm:flex hidden flex-row items-center">
                   <a v-for="header in headerList" @click="scrollIntoView(header.id)" class="text-2xl px-6 text-secondary">
                       {{ header.name }}
                   </a>
@@ -78,6 +113,21 @@ const scrollIntoView = (id) => {
                   <a href="src/assets/Angelo_Resume.pdf" download="Angelo_Resume.pdf" class="download">Download CSV</a>
               </div>
               <img class="banner" src="@/assets/angeloimg.png">
+          </div>
+          <div class="skills">
+              <div class="sm:mx-10 mx-4">
+                  <h1>Skills</h1>
+                  <div class="flex flex-wrap text-xl">
+                      <RadialProgress
+                          class="m-10"
+                          v-for="skill in skills"
+                          :diameter="200"
+                          :completed-steps="skill.knowledge"
+                          :total-steps="10">
+                          {{ skill.name }}
+                      </RadialProgress>
+                  </div>
+              </div>
           </div>
           <div class="grid sm:grid-cols-12 my-10" id="about_me">
               <div class="sm:col-span-4">
@@ -113,7 +163,7 @@ const scrollIntoView = (id) => {
                                   <template #summary>
                                       <h1 class="py-4">{{ item.name }}</h1>
                                   </template>
-                                  <h2>{{ item.position }}</h2>
+                                  <div class="text-2xl text-primarydark">{{ item.position }}</div>
                                   <li>
                                       <ul v-for="d in item.description">{{ d }}</ul>
                                   </li>
@@ -172,18 +222,19 @@ h1 {
     }
 }
 .accordion-container {
-    width: 50rem;
+    width: 60rem;
     @media only screen and (max-width: 600px) {
         width: 20rem;
     }
 }
 .header {
-    @apply bg-gradient-to-l from-primarydark to-secondary sticky top-0 z-10;
-    display: flex;
-    justify-content: space-between;
+    @apply bg-gradient-to-l from-primarydark to-secondary sm:sticky top-0 z-10 flex sm:flex-row flex-col sm:justify-between;
 }
 #logo {
-    @apply rounded-full;
+    @apply sm:rounded-full;
     height: 7rem;
+    @media only screen and (max-width: 600px) {
+        height: 20rem;
+    }
 }
 </style>

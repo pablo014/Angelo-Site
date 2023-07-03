@@ -69,7 +69,7 @@ const skills: Array<Skill> = [
 ]
 const experience: Array<Experience> = [{
     name: 'ArroyoDev',
-    image: '/src/assets/arroyodevLogo.png',
+    image: './src/assets/arroyodevLogo.png',
     description: [
         'Expertly develop and meticulously maintain highly responsive websites, harnessing the power of HTML, advanced CSS preprocessors, and cutting-edge JavaScript frameworks. Seamlessly ensure compatibility across a wide array of browsers and devices, guaranteeing an optimal user experience and maximizing reach.',
     ],
@@ -77,7 +77,7 @@ const experience: Array<Experience> = [{
 },
     {
         name: 'Ullrich Insurance',
-        image: '/src/assets/ullrichLogo.jpg',
+        image: './src/assets/ullrichLogo.jpg',
         description: [
             'Drove the software development team in successfully building cutting-edge CMS automation tools, revolutionizing the company\'s workflow. Implemented streamlined processes that led to a 40% reduction in manual tasks, boosting team efficiency and saving countless hours of work.',
         ],
@@ -85,7 +85,7 @@ const experience: Array<Experience> = [{
     },
     {
         name: 'WeCare Insurance',
-        image: '/src/assets/weCareLogo.png',
+        image: './src/assets/weCareLogo.png',
         description: [
             'Revolutionized user processes through the creation of meticulously engineered and elegantly designed applications, leveraging automation to enhance efficiency and productivity. Developed intuitive and streamlined interfaces, prompting a significant upturn in a 50% reduction in manual tasks and enabling users to accomplish their goals swiftly and effortlessly. ',
         ],
@@ -126,7 +126,7 @@ const scrollIntoView = (id) => {
   <main>
       <div>
           <div class="header">
-              <img src="/src/assets/AngeloPabloLogo.png" id="logo" />
+              <img src="./src/assets/AngeloPabloLogo.png" id="logo" />
               <div class="sm:flex hidden flex-row items-center cursor-pointer">
                   <a v-for="header in headerList" @click="scrollIntoView(header.id)" class="text-2xl px-6 text-secondary">
                       {{ header.name }}
@@ -138,7 +138,7 @@ const scrollIntoView = (id) => {
                   <h1>
                       Hello, I'm Angelo!
                   </h1>
-                  <a href="/src/assets/Angelo_Resume.pdf" download="Angelo_Resume.pdf" class="download">Download CSV</a>
+                  <a href="./src/assets/Angelo_Resume.pdf" download="Angelo_Resume.pdf" class="download">Download CSV</a>
               </div>
               <img class="banner" src="@/assets/angeloimg.png">
           </div>

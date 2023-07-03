@@ -69,7 +69,7 @@ const skills: Array<Skill> = [
 ]
 const experience: Array<Experience> = [{
     name: 'ArroyoDev',
-    image: './src/assets/arroyodevLogo.png',
+    image: '../assets/arroyodevLogo.png',
     description: [
         'Expertly develop and meticulously maintain highly responsive websites, harnessing the power of HTML, advanced CSS preprocessors, and cutting-edge JavaScript frameworks. Seamlessly ensure compatibility across a wide array of browsers and devices, guaranteeing an optimal user experience and maximizing reach.',
     ],
@@ -77,7 +77,7 @@ const experience: Array<Experience> = [{
 },
     {
         name: 'Ullrich Insurance',
-        image: './src/assets/ullrichLogo.jpg',
+        image: '../assets/ullrichLogo.jpg',
         description: [
             'Drove the software development team in successfully building cutting-edge CMS automation tools, revolutionizing the company\'s workflow. Implemented streamlined processes that led to a 40% reduction in manual tasks, boosting team efficiency and saving countless hours of work.',
         ],
@@ -85,7 +85,7 @@ const experience: Array<Experience> = [{
     },
     {
         name: 'WeCare Insurance',
-        image: './src/assets/weCareLogo.png',
+        image: '../assets/weCareLogo.png',
         description: [
             'Revolutionized user processes through the creation of meticulously engineered and elegantly designed applications, leveraging automation to enhance efficiency and productivity. Developed intuitive and streamlined interfaces, prompting a significant upturn in a 50% reduction in manual tasks and enabling users to accomplish their goals swiftly and effortlessly. ',
         ],
@@ -126,7 +126,7 @@ const scrollIntoView = (id) => {
   <main>
       <div>
           <div class="header">
-              <img src="./src/assets/AngeloPabloLogo.png" id="logo" />
+              <img src="../assets/AngeloPabloLogo.png" id="logo" />
               <div class="sm:flex hidden flex-row items-center cursor-pointer">
                   <a v-for="header in headerList" @click="scrollIntoView(header.id)" class="text-2xl px-6 text-secondary">
                       {{ header.name }}
@@ -138,7 +138,7 @@ const scrollIntoView = (id) => {
                   <h1>
                       Hello, I'm Angelo!
                   </h1>
-                  <a href="./src/assets/Angelo_Resume.pdf" download="Angelo_Resume.pdf" class="download">Download CSV</a>
+                  <a href="../assets/Angelo_Resume.pdf" download="Angelo_Resume.pdf" class="download">Download CSV</a>
               </div>
               <img class="banner" src="@/assets/angeloimg.png">
           </div>
@@ -183,19 +183,49 @@ const scrollIntoView = (id) => {
           <div class="sm:mx-10 mx-4" id="experience">
               <h1>Experience</h1>
               <carousel :items-to-show="isMobile? 1 : 1.5" wrapAround>
-                  <slide v-for="(item, index) in experience" :key="index">
+                  <slide index="1">
                       <div class="flex flex-col justify-center p-5">
-                          <img :src="item.image" class="slideImg" />
+                          <img src="../assets/arroyodevLogo.png" class="slideImg" />
                           <AccordionList class="bg-black">
-                              <AccordionItem class="bg-black accordion-container" :id="index">
+                              <AccordionItem class="bg-black accordion-container" :id="1">
                                   <template #summary>
-                                      <h1 class="py-4">{{ item.name }}</h1>
+                                      <h1 class="py-4">ArroyoDev</h1>
                                   </template>
                                   <div class="px-10 pb-5">
-                                      <div class="text-2xl text-primarydark">{{ item.position }}</div>
-                                      <li class="text-xl">
-                                          <ul v-for="d in item.description">{{ d }}</ul>
-                                      </li>
+                                      <div class="text-2xl text-primarydark">Frontend Developer</div>
+                                      <div class="text-xl">Expertly develop and meticulously maintain highly responsive websites, harnessing the power of HTML, advanced CSS preprocessors, and cutting-edge JavaScript frameworks. Seamlessly ensure compatibility across a wide array of browsers and devices, guaranteeing an optimal user experience and maximizing reach.</div>
+                                  </div>
+                              </AccordionItem>
+                          </AccordionList>
+                      </div>
+                  </slide>
+                  <slide index="2">
+                      <div class="flex flex-col justify-center p-5">
+                          <img src="../assets/ullrichLogo.jpg" class="slideImg" />
+                          <AccordionList class="bg-black">
+                              <AccordionItem class="bg-black accordion-container" :id="2">
+                                  <template #summary>
+                                      <h1 class="py-4">Ullrich Insurance</h1>
+                                  </template>
+                                  <div class="px-10 pb-5">
+                                      <div class="text-2xl text-primarydark">Software Developer Intern</div>
+                                      <div class="text-xl">Drove the software development team in successfully building cutting-edge CMS automation tools, revolutionizing the company\'s workflow. Implemented streamlined processes that led to a 40% reduction in manual tasks, boosting team efficiency and saving countless hours of work.</div>
+                                  </div>
+                              </AccordionItem>
+                          </AccordionList>
+                      </div>
+                  </slide>
+                  <slide index="3">
+                      <div class="flex flex-col justify-center p-5">
+                          <img src="../assets/weCareLogo.png" class="slideImg" />
+                          <AccordionList class="bg-black">
+                              <AccordionItem class="bg-black accordion-container" :id="3">
+                                  <template #summary>
+                                      <h1 class="py-4">WeCare Insurance</h1>
+                                  </template>
+                                  <div class="px-10 pb-5">
+                                      <div class="text-2xl text-primarydark">Project Manager/Software Engineer Intern</div>
+                                      <div class="text-xl">Revolutionized user processes through the creation of meticulously engineered and elegantly designed applications, leveraging automation to enhance efficiency and productivity. Developed intuitive and streamlined interfaces, prompting a significant upturn in a 50% reduction in manual tasks and enabling users to accomplish their goals swiftly and effortlessly.</div>
                                   </div>
                               </AccordionItem>
                           </AccordionList>

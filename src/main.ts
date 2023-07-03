@@ -4,7 +4,6 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import { useAccordion } from "vue3-rich-accordion";
-import VueProgressBar from "@aacassandra/vue3-progressbar";
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
@@ -34,8 +33,6 @@ const options = {
 };
 
 const app = createApp(App)
-
-app.use(VueProgressBar, options)
 app.use(createPinia())
 app.use(router)
 app.use(useAccordion)

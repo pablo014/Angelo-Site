@@ -156,7 +156,7 @@ const scrollIntoView = (id) => {
                       <div class="flex flex-col justify-center p-5">
                           <img src="../assets/arroyodevLogo.png" class="slideImg" />
                           <AccordionList class="bg-black">
-                              <AccordionItem class="bg-black accordion-container" :id="1">
+                              <AccordionItem class="bg-black accordion-container" id="1">
                                   <template #summary>
                                       <h1 class="py-4">ArroyoDev</h1>
                                   </template>
@@ -172,7 +172,7 @@ const scrollIntoView = (id) => {
                       <div class="flex flex-col justify-center p-5">
                           <img src="../assets/ullrichLogo.jpg" class="slideImg" />
                           <AccordionList class="bg-black">
-                              <AccordionItem class="bg-black accordion-container" :id="2">
+                              <AccordionItem class="bg-black accordion-container" id="2">
                                   <template #summary>
                                       <h1 class="py-4">Ullrich Insurance</h1>
                                   </template>
@@ -188,7 +188,7 @@ const scrollIntoView = (id) => {
                       <div class="flex flex-col justify-center p-5">
                           <img src="../assets/weCareLogo.png" class="slideImg" />
                           <AccordionList class="bg-black">
-                              <AccordionItem class="bg-black accordion-container" :id="3">
+                              <AccordionItem class="bg-black accordion-container" id="3">
                                   <template #summary>
                                       <h1 class="py-4">WeCare Insurance</h1>
                                   </template>

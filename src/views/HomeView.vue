@@ -152,7 +152,7 @@ const scrollIntoView = (id) => {
           <div class="sm:mx-10 mx-4" id="experience">
               <h1>Experience</h1>
               <carousel :items-to-show="isMobile? 1 : 1.5" wrapAround>
-                  <slide index="1">
+                  <slide :index="1">
                       <div class="flex flex-col justify-center p-5">
                           <img src="../assets/arroyodevLogo.png" class="slideImg" />
                           <AccordionList class="bg-black">
@@ -168,7 +168,7 @@ const scrollIntoView = (id) => {
                           </AccordionList>
                       </div>
                   </slide>
-                  <slide index="2">
+                  <slide :index="2">
                       <div class="flex flex-col justify-center p-5">
                           <img src="../assets/ullrichLogo.jpg" class="slideImg" />
                           <AccordionList class="bg-black">
@@ -184,7 +184,7 @@ const scrollIntoView = (id) => {
                           </AccordionList>
                       </div>
                   </slide>
-                  <slide index="3">
+                  <slide :index="3">
                       <div class="flex flex-col justify-center p-5">
                           <img src="../assets/weCareLogo.png" class="slideImg" />
                           <AccordionList class="bg-black">

@@ -4,12 +4,6 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import RadialProgress from "vue3-radial-progress";
 import { useMediaQuery } from '@vueuse/core';
 
-interface Experience {
-    name: string,
-    image: string,
-    description: Array<string>,
-    position: string,
-};
 interface Skill {
     name: string,
     knowledge: number
@@ -65,31 +59,6 @@ const skills: Array<Skill> = [
     {
         name: "React",
         knowledge: 6,
-    }
-]
-const experience: Array<Experience> = [{
-    name: 'ArroyoDev',
-    image: '../assets/arroyodevLogo.png',
-    description: [
-        'Expertly develop and meticulously maintain highly responsive websites, harnessing the power of HTML, advanced CSS preprocessors, and cutting-edge JavaScript frameworks. Seamlessly ensure compatibility across a wide array of browsers and devices, guaranteeing an optimal user experience and maximizing reach.',
-    ],
-    position: 'Frontend Developer',
-},
-    {
-        name: 'Ullrich Insurance',
-        image: '../assets/ullrichLogo.jpg',
-        description: [
-            'Drove the software development team in successfully building cutting-edge CMS automation tools, revolutionizing the company\'s workflow. Implemented streamlined processes that led to a 40% reduction in manual tasks, boosting team efficiency and saving countless hours of work.',
-        ],
-        position: 'Software Developer',
-    },
-    {
-        name: 'WeCare Insurance',
-        image: '../assets/weCareLogo.png',
-        description: [
-            'Revolutionized user processes through the creation of meticulously engineered and elegantly designed applications, leveraging automation to enhance efficiency and productivity. Developed intuitive and streamlined interfaces, prompting a significant upturn in a 50% reduction in manual tasks and enabling users to accomplish their goals swiftly and effortlessly. ',
-        ],
-        position: 'Project Manager'
     }
 ]
 const headerList = [

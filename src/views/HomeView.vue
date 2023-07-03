@@ -71,9 +71,7 @@ const experience: Array<Experience> = [{
     name: 'ArroyoDev',
     image: 'src/assets/arroyodevLogo.png',
     description: [
-        'Collaborate with cross-functional teams including designers and backend developers to create visually appealing and user-friendly web applications.',
-        'Develop and maintain responsive websites using HTML, CSS, and JavaScript, ensuring compatibility across various browsers and devices.',
-        'Utilize modern frontend frameworks, such as React.js, Angular, or Vue.js, to streamline development processes and improve code maintainability.'
+        'Expertly develop and meticulously maintain highly responsive websites, harnessing the power of HTML, advanced CSS preprocessors, and cutting-edge JavaScript frameworks. Seamlessly ensure compatibility across a wide array of browsers and devices, guaranteeing an optimal user experience and maximizing reach.',
     ],
     position: 'Frontend Developer',
 },
@@ -81,9 +79,7 @@ const experience: Array<Experience> = [{
         name: 'Ullrich Insurance',
         image: 'src/assets/ullrichLogo.jpg',
         description: [
-            'Participated in team meetings and contributed ideas for improving frontend development processes and workflows.',
-            'Improved the process of sending and receiving claims by creating software that is simple and friendly to use',
-            'Stay up-to-date with the latest industry trends, best practices, and emerging technologies in frontend development, and actively share knowledge with the team.'
+            'Drove the software development team in successfully building cutting-edge CMS automation tools, revolutionizing the company\'s workflow. Implemented streamlined processes that led to a 40% reduction in manual tasks, boosting team efficiency and saving countless hours of work.',
         ],
         position: 'Software Developer',
     },
@@ -91,9 +87,7 @@ const experience: Array<Experience> = [{
         name: 'WeCare Insurance',
         image: 'src/assets/weCareLogo.png',
         description: [
-            'Implemented Scrum and Agile Methodologies to communicate project plans with teammates',
-            'Automated user processes by creating efficient and well designed applications',
-            'Assisted in the optimization of website performance through code refactoring and asset optimization techniques.'
+            'Revolutionized user processes through the creation of meticulously engineered and elegantly designed applications, leveraging automation to enhance efficiency and productivity. Developed intuitive and streamlined interfaces, prompting a significant upturn in a 50% reduction in manual tasks and enabling users to accomplish their goals swiftly and effortlessly. ',
         ],
         position: 'Project Manager'
     }
@@ -197,10 +191,12 @@ const scrollIntoView = (id) => {
                                   <template #summary>
                                       <h1 class="py-4">{{ item.name }}</h1>
                                   </template>
-                                  <div class="text-2xl text-primarydark">{{ item.position }}</div>
-                                  <li>
-                                      <ul v-for="d in item.description">{{ d }}</ul>
-                                  </li>
+                                  <div class="px-10 pb-5">
+                                      <div class="text-2xl text-primarydark">{{ item.position }}</div>
+                                      <li class="text-xl">
+                                          <ul v-for="d in item.description">{{ d }}</ul>
+                                      </li>
+                                  </div>
                               </AccordionItem>
                           </AccordionList>
                       </div>
@@ -213,7 +209,6 @@ const scrollIntoView = (id) => {
               </carousel>
           </div>
           <div id="footer">
-              <h1 class="text-center">Get Connected!</h1>
               <div class="flex flex-wrap items-center justify-center">
                   <div v-for="contact in contactList">
                       <a :href="contact.url">

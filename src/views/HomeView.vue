@@ -129,7 +129,7 @@ const scrollIntoView = (id: string) => {
           <div class="grid sm:grid-cols-12 my-10" id="about_me">
               <div class="sm:col-span-4">
                   <div class="border">
-                      <img class="about-me-image" src="@/assets/side-profile-removebg-preview.png"/>
+                      <img class="about-me-image" src="@/assets/headshot.png"/>
                   </div>
               </div>
               <div class="sm:col-span-7 ml-4">

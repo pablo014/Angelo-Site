@@ -93,7 +93,7 @@ const scrollIntoView = (id: string) => {
 
 <template>
   <main>
-      <div>
+      <div class="text-neutral">
           <div class="header">
               <img src="../assets/AngeloPabloLogo.png" id="logo" />
               <div class="sm:flex hidden flex-row items-center cursor-pointer">

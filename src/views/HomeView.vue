@@ -207,6 +207,48 @@ const scrollIntoView = (id: string) => {
                   </template>
               </carousel>
           </div>
+          <div class="sm:mx-10 mx-4" id="projects">
+              <h1>Projects</h1>
+              <carousel :items-to-show="isMobile? 1 : 1.5" wrapAround>
+                  <slide :index="1">
+                      <div class="flex flex-col justify-center p-5">
+                          <img src="../assets/Knuckle_Sandwich.png" class="slideImg" />
+                          <AccordionList class="bg-black">
+                              <AccordionItem class="bg-black accordion-container" id="1">
+                                  <template #summary>
+                                      <h1 class="py-4">Knuckle Sandwich</h1>
+                                  </template>
+                                  <div class="px-10 pb-5">
+                                      <div class="text-xl">
+                                          A Vue project using external libraries to add wonderful animations and improved UI/UX.
+                                      </div>
+                                  </div>
+                              </AccordionItem>
+                          </AccordionList>
+                      </div>
+                  </slide>
+                  <slide :index="2">
+                      <div class="flex flex-col justify-center p-5">
+                          <img src="../assets/pokedex.png" class="slideImg" />
+                          <AccordionList class="bg-black">
+                              <AccordionItem class="bg-black accordion-container" id="2">
+                                  <template #summary>
+                                      <h1 class="py-4">Pokedex</h1>
+                                  </template>
+                                  <div class="px-10 pb-5">
+                                      <div class="text-xl">Pokedex Vite app using vue router and axios api calls</div>
+                                  </div>
+                              </AccordionItem>
+                          </AccordionList>
+                      </div>
+                  </slide>
+
+                  <template #addons>
+                      <navigation />
+                      <pagination />
+                  </template>
+              </carousel>
+          </div>
           <div id="footer">
               <div class="flex flex-wrap items-center justify-center">
                   <div v-for="contact in contactList">

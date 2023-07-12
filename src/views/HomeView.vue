@@ -107,7 +107,7 @@ const scrollIntoView = (id: string) => {
                   <h1>
                       Hello, I'm Angelo!
                   </h1>
-                  <a href="../assets/Angelo_Resume.pdf" download="Angelo_Resume.pdf" class="download">Download CSV</a>
+                  <a href="./src/assets/Angelo_Resume.pdf" download="Angelo_Resume.pdf" class="download">Download CSV</a>
               </div>
               <img class="banner" src="@/assets/angeloimg.png">
           </div>

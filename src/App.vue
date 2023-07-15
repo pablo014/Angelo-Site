@@ -16,7 +16,7 @@ import { RouterLink, RouterView } from 'vue-router'
     padding: 0rem !important;
 }
 main {
-    @apply w-screen;
+    width: 98.7vw;
     background: url(@/assets/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

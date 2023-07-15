@@ -96,10 +96,17 @@ const scrollIntoView = (id: string) => {
       <div class="text-neutral">
           <div class="header">
               <img src="../assets/AngeloPabloLogo.png" id="logo" />
-              <div class="sm:flex hidden flex-row items-center cursor-pointer">
-                  <a v-for="header in headerList" @click="scrollIntoView(header.id)" class="text-2xl px-6 text-secondary">
+              <div class="sm:flex hidden flex-row items-center cursor-pointer z-10">
+                  <a v-for="header in headerList" @click="scrollIntoView(header.id)" class="text-2xl px-6 text-white">
                       {{ header.name }}
                   </a>
+              </div>
+              <div class="wave-dark">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                      <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                      <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                      <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                  </svg>
               </div>
           </div>
           <div class="image" id="home">
@@ -111,12 +118,12 @@ const scrollIntoView = (id: string) => {
               </div>
               <img class="banner" src="@/assets/angeloimg.png">
           </div>
-          <div id="skills">
+          <div id="skills" class="py-40">
               <div class="sm:mx-10 mx-4">
                   <h1>Skills</h1>
                   <div class="flex flex-wrap sm:text-xl">
                       <RadialProgress
-                          class="m-5 sm:m-10 hover:scale-125 transition-all duration-500"
+                          class="m-5 sm:m-10 hover:scale-125 transition-all duration-500 z-10"
                           v-for="skill in skills"
                           :diameter="isMobile ? 130 : 200"
                           :completed-steps="skill.knowledge"
@@ -125,28 +132,35 @@ const scrollIntoView = (id: string) => {
                       </RadialProgress>
                   </div>
               </div>
-          </div>
-          <div class="grid sm:grid-cols-12 my-10" id="about_me">
-              <div class="sm:col-span-4">
-                  <div class="border">
-                      <img class="about-me-image" src="@/assets/headshot.png"/>
-                  </div>
+              <div class="wave-prim">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                      <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                  </svg>
               </div>
-              <div class="sm:col-span-7 ml-4">
-                  <h1 class="mb-5">About Me</h1>
-                  <p class="text-lg">I am a passionate and dedicated Frontend Developer with a strong focus on creating seamless user experiences and visually appealing web applications. With a solid foundation in HTML, CSS, and JavaScript, I thrive on turning design concepts into functional and interactive interfaces.
+          </div>
+          <div>
+              <div class="grid sm:grid-cols-12 bg-primarydark" id="about_me">
+                  <div class="sm:col-span-4">
+                      <div class="border">
+                          <img class="about-me-image" src="@/assets/headshot.png"/>
+                      </div>
+                  </div>
+                  <div class="sm:col-span-7 ml-4">
+                      <h1 class="mb-5">About Me</h1>
+                      <p class="text-lg">I am a passionate and dedicated Frontend Developer with a strong focus on creating seamless user experiences and visually appealing web applications. With a solid foundation in HTML, CSS, and JavaScript, I thrive on turning design concepts into functional and interactive interfaces.
 
-                      Throughout my career, I have had the opportunity to collaborate with cross-functional teams, including designers and backend developers, to deliver high-quality projects that exceed client expectations. I take pride in my ability to understand user needs and translate them into intuitive and engaging frontend solutions.
+                          Throughout my career, I have had the opportunity to collaborate with cross-functional teams, including designers and backend developers, to deliver high-quality projects that exceed client expectations. I take pride in my ability to understand user needs and translate them into intuitive and engaging frontend solutions.
 
-                      Constantly seeking to expand my skill set, I stay updated with the latest trends and technologies in frontend development. I am proficient in working with modern frameworks such as React.js, Angular, or Vue.js, which allow me to streamline development processes and create scalable and maintainable code.
+                          Constantly seeking to expand my skill set, I stay updated with the latest trends and technologies in frontend development. I am proficient in working with modern frameworks such as React.js, Angular, or Vue.js, which allow me to streamline development processes and create scalable and maintainable code.
 
-                      Attention to detail is one of my strengths, and I always strive for pixel-perfect implementations. I am experienced in working with responsive design principles, ensuring that websites and applications are visually consistent and accessible across various devices and screen sizes.
+                          Attention to detail is one of my strengths, and I always strive for pixel-perfect implementations. I am experienced in working with responsive design principles, ensuring that websites and applications are visually consistent and accessible across various devices and screen sizes.
 
-                      In addition to my technical expertise, I am a strong believer in teamwork and effective communication. I thrive in collaborative environments where I can contribute my ideas, learn from others, and collectively achieve project success.
+                          In addition to my technical expertise, I am a strong believer in teamwork and effective communication. I thrive in collaborative environments where I can contribute my ideas, learn from others, and collectively achieve project success.
 
-                      As a frontend developer, I am driven by the desire to continuously learn, innovate, and push the boundaries of what is possible in the digital space. I am excited about the opportunity to contribute my skills and creativity to projects that make a meaningful impact and provide exceptional user experiences.
+                          As a frontend developer, I am driven by the desire to continuously learn, innovate, and push the boundaries of what is possible in the digital space. I am excited about the opportunity to contribute my skills and creativity to projects that make a meaningful impact and provide exceptional user experiences.
 
-                      Let's connect and discuss how we can collaborate to create remarkable frontend solutions together.</p>
+                          Let's connect and discuss how we can collaborate to create remarkable frontend solutions together.</p>
+                  </div>
               </div>
           </div>
           <div class="sm:mx-10 mx-4" id="experience">
@@ -250,6 +264,13 @@ const scrollIntoView = (id: string) => {
               </carousel>
           </div>
           <div id="footer">
+              <div class="wave-prim">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                      <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                      <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                      <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                  </svg>
+              </div>
               <div class="flex flex-wrap items-center justify-center">
                   <div v-for="contact in contactList">
                       <a :href="contact.url">
@@ -291,6 +312,12 @@ h1 {
     @apply bg-secondary rounded;
     border-radius: 500px;
 }
+#about_me {
+    margin-top: -1px;
+    border-radius: 0px 0px 0px 400px;
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+}
 .download {
     @apply text-neutral text-lg;
     border: #66FCF1 1px solid;
@@ -310,7 +337,7 @@ h1 {
     }
 }
 .header {
-    @apply bg-gradient-to-l from-primarydark to-secondary sm:sticky top-0 z-10 flex sm:flex-row flex-col sm:justify-between;
+    @apply bg-gradient-to-l from-primarydark to-secondary sm:sticky top-0 z-20 flex sm:flex-row flex-col sm:justify-between;
 }
 #logo {
     @apply sm:rounded-full;
@@ -320,6 +347,48 @@ h1 {
     }
 }
 #footer {
-    @apply bg-secondarydark py-10;
+    @apply py-20;
 }
+.wave-prim {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-prim svg {
+    position: relative;
+    display: block;
+    width: calc(226% + 1.3px);
+    height: 200px;
+    transform: rotateY(180deg);
+}
+
+.wave-prim .shape-fill {
+    fill: #45A29E;
+}
+.wave-dark {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-dark svg {
+    position: relative;
+    display: block;
+    width: calc(177% + 1.3px);
+    height: 100px;
+    transform: rotateY(180deg);
+}
+
+.wave-dark .shape-fill {
+    fill: #0B0C10;
+}
+
 </style>

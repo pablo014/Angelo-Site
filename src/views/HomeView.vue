@@ -114,7 +114,6 @@ const scrollIntoView = (id: string) => {
                   <h1>
                       Hello, I'm Angelo!
                   </h1>
-                  <a href="./src/assets/Angelo_Resume.pdf" download="Angelo_Resume.pdf" class="download">Download CSV</a>
               </div>
               <img class="banner" src="@/assets/angeloimg.png">
           </div>
@@ -163,105 +162,106 @@ const scrollIntoView = (id: string) => {
                   </div>
               </div>
           </div>
-          <div class="sm:mx-10 mx-4" id="experience">
-              <h1>Experience</h1>
-              <carousel :items-to-show="isMobile? 1 : 1.5" wrapAround>
-                  <slide :index="1">
-                      <div class="flex flex-col justify-center p-5">
-                          <img src="../assets/arroyodevLogo.png" class="slideImg" />
-                          <AccordionList class="bg-black">
-                              <AccordionItem class="bg-black accordion-container" id="1">
-                                  <template #summary>
-                                      <h1 class="py-4">ArroyoDev</h1>
-                                  </template>
-                                  <div class="px-10 pb-5">
-                                      <div class="text-2xl text-primarydark">Frontend Developer</div>
-                                      <div class="text-xl">Expertly develop and meticulously maintain highly responsive websites, harnessing the power of HTML, advanced CSS preprocessors, and cutting-edge JavaScript frameworks. Seamlessly ensure compatibility across a wide array of browsers and devices, guaranteeing an optimal user experience and maximizing reach.</div>
-                                  </div>
-                              </AccordionItem>
-                          </AccordionList>
-                      </div>
-                  </slide>
-                  <slide :index="2">
-                      <div class="flex flex-col justify-center p-5">
-                          <img src="../assets/ullrichLogo.jpg" class="slideImg" />
-                          <AccordionList class="bg-black">
-                              <AccordionItem class="bg-black accordion-container" id="2">
-                                  <template #summary>
-                                      <h1 class="py-4">Ullrich Insurance</h1>
-                                  </template>
-                                  <div class="px-10 pb-5">
-                                      <div class="text-2xl text-primarydark">Software Developer Intern</div>
-                                      <div class="text-xl">Drove the software development team in successfully building cutting-edge CMS automation tools, revolutionizing the company\'s workflow. Implemented streamlined processes that led to a 40% reduction in manual tasks, boosting team efficiency and saving countless hours of work.</div>
-                                  </div>
-                              </AccordionItem>
-                          </AccordionList>
-                      </div>
-                  </slide>
-                  <slide :index="3">
-                      <div class="flex flex-col justify-center p-5">
-                          <img src="../assets/weCareLogo.png" class="slideImg" />
-                          <AccordionList class="bg-black">
-                              <AccordionItem class="bg-black accordion-container" id="3">
-                                  <template #summary>
-                                      <h1 class="py-4">WeCare Insurance</h1>
-                                  </template>
-                                  <div class="px-10 pb-5">
-                                      <div class="text-2xl text-primarydark">Project Manager/Software Engineer Intern</div>
-                                      <div class="text-xl">Revolutionized user processes through the creation of meticulously engineered and elegantly designed applications, leveraging automation to enhance efficiency and productivity. Developed intuitive and streamlined interfaces, prompting a significant upturn in a 50% reduction in manual tasks and enabling users to accomplish their goals swiftly and effortlessly.</div>
-                                  </div>
-                              </AccordionItem>
-                          </AccordionList>
-                      </div>
-                  </slide>
+          <div class="pb-40" style="margin-bottom: -1px">
+              <div class="sm:mx-10 mx-4" id="experience">
+                  <h1>Experience</h1>
+                  <carousel :items-to-show="isMobile? 1 : 1.5" wrapAround>
+                      <slide :index="1">
+                          <div class="flex flex-col justify-center p-5">
+                              <img src="../assets/arroyodevLogo.png" class="slideImg" />
+                              <AccordionList class="bg-black">
+                                  <AccordionItem class="bg-black accordion-container" id="1">
+                                      <template #summary>
+                                          <h1 class="py-4">ArroyoDev</h1>
+                                      </template>
+                                      <div class="px-10 pb-5">
+                                          <div class="text-2xl text-primarydark">Frontend Developer</div>
+                                          <div class="text-xl">Expertly develop and meticulously maintain highly responsive websites, harnessing the power of HTML, advanced CSS preprocessors, and cutting-edge JavaScript frameworks. Seamlessly ensure compatibility across a wide array of browsers and devices, guaranteeing an optimal user experience and maximizing reach.</div>
+                                      </div>
+                                  </AccordionItem>
+                              </AccordionList>
+                          </div>
+                      </slide>
+                      <slide :index="2">
+                          <div class="flex flex-col justify-center p-5">
+                              <img src="../assets/ullrichLogo.jpg" class="slideImg" />
+                              <AccordionList class="bg-black">
+                                  <AccordionItem class="bg-black accordion-container" id="2">
+                                      <template #summary>
+                                          <h1 class="py-4">Ullrich Insurance</h1>
+                                      </template>
+                                      <div class="px-10 pb-5">
+                                          <div class="text-2xl text-primarydark">Software Developer Intern</div>
+                                          <div class="text-xl">Drove the software development team in successfully building cutting-edge CMS automation tools, revolutionizing the company\'s workflow. Implemented streamlined processes that led to a 40% reduction in manual tasks, boosting team efficiency and saving countless hours of work.</div>
+                                      </div>
+                                  </AccordionItem>
+                              </AccordionList>
+                          </div>
+                      </slide>
+                      <slide :index="3">
+                          <div class="flex flex-col justify-center p-5">
+                              <img src="../assets/weCareLogo.png" class="slideImg" />
+                              <AccordionList class="bg-black">
+                                  <AccordionItem class="bg-black accordion-container" id="3">
+                                      <template #summary>
+                                          <h1 class="py-4">WeCare Insurance</h1>
+                                      </template>
+                                      <div class="px-10 pb-5">
+                                          <div class="text-2xl text-primarydark">Project Manager/Software Engineer Intern</div>
+                                          <div class="text-xl">Revolutionized user processes through the creation of meticulously engineered and elegantly designed applications, leveraging automation to enhance efficiency and productivity. Developed intuitive and streamlined interfaces, prompting a significant upturn in a 50% reduction in manual tasks and enabling users to accomplish their goals swiftly and effortlessly.</div>
+                                      </div>
+                                  </AccordionItem>
+                              </AccordionList>
+                          </div>
+                      </slide>
 
-                  <template #addons>
-                      <navigation />
-                      <pagination />
-                  </template>
-              </carousel>
+                      <template #addons>
+                          <navigation />
+                          <pagination />
+                      </template>
+                  </carousel>
+              </div>
+              <div class="wave-sec">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                      <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                  </svg>
+              </div>
           </div>
-          <div class="sm:mx-10 mx-4" id="projects">
-              <h1>Projects</h1>
-              <carousel :items-to-show="isMobile? 1 : 1.5" wrapAround>
-                  <slide :index="1">
-                      <div class="flex flex-col justify-center p-5">
-                          <img src="../assets/Knuckle_Sandwich.png" class="slideImg" />
-                          <AccordionList class="bg-black">
-                              <AccordionItem class="bg-black accordion-container" id="1">
-                                  <template #summary>
-                                      <h1 class="py-4">Knuckle Sandwich</h1>
-                                  </template>
+          <div class="bg-primarydark mb-12">
+              <div class="sm:mx-10 mx-4" id="projects">
+                  <h1>Projects</h1>
+                  <carousel :items-to-show="isMobile? 1 : 1.5" wrapAround>
+                      <slide :index="1">
+                          <div class="flex flex-col justify-center p-5">
+                              <img src="../assets/Knuckle_Sandwich.png" class="slideImg" />
+                              <div class="bg-black">
+                                  <h1 class="py-4">Knuckle Sandwich</h1>
                                   <div class="px-10 pb-5">
                                       <div class="text-xl">
                                           A Vue project using external libraries to add wonderful animations and improved UI/UX.
                                       </div>
                                   </div>
-                              </AccordionItem>
-                          </AccordionList>
-                      </div>
-                  </slide>
-                  <slide :index="2">
-                      <div class="flex flex-col justify-center p-5">
-                          <img src="../assets/pokedex.png" class="slideImg" />
-                          <AccordionList class="bg-black">
-                              <AccordionItem class="bg-black accordion-container" id="2">
-                                  <template #summary>
-                                      <h1 class="py-4">Pokedex</h1>
-                                  </template>
+                              </div>
+                          </div>
+                      </slide>
+                      <slide :index="2">
+                          <div class="flex flex-col justify-center p-5">
+                              <img src="../assets/pokedex.png" class="slideImg" />
+                              <div class="bg-black">
+                                  <h1 class="py-4">Pokedex</h1>
                                   <div class="px-10 pb-5">
                                       <div class="text-xl">Pokedex Vite app using vue router and axios api calls</div>
                                   </div>
-                              </AccordionItem>
-                          </AccordionList>
-                      </div>
-                  </slide>
+                              </div>
+                          </div>
+                      </slide>
 
-                  <template #addons>
-                      <navigation />
-                      <pagination />
-                  </template>
-              </carousel>
+                      <template #addons>
+                          <navigation />
+                          <pagination />
+                      </template>
+                  </carousel>
+              </div>
           </div>
           <div id="footer">
               <div class="wave-prim">
@@ -347,7 +347,7 @@ h1 {
     }
 }
 #footer {
-    @apply py-20;
+    @apply pb-20;
 }
 .wave-prim {
     position: absolute;
@@ -367,6 +367,25 @@ h1 {
 }
 
 .wave-prim .shape-fill {
+    fill: #45A29E;
+}
+.wave-sec {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-sec svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 150px;
+}
+
+.wave-sec .shape-fill {
     fill: #45A29E;
 }
 .wave-dark {

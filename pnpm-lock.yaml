@@ -23,6 +23,7 @@ specifiers:
   jsdom: ^21.1.0
   npm-run-all: ^4.1.5
   pinia: ^2.0.32
+  pnpm: ^8.6.10
   postcss: ^8.4.21
   prettier: ^2.8.4
   primevue: ^3.29.2
@@ -48,6 +49,7 @@ dependencies:
   '@fortawesome/vue-fontawesome': 3.0.3_5vq7vkrflr3ckmegqnktogj5ty
   '@vueuse/core': 10.2.1_vue@3.2.47
   pinia: 2.0.33_7h6e7cvei2rsgyre2mq4fyhehq
+  pnpm: 8.6.10
   primevue: 3.29.2_vue@3.2.47
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
@@ -2676,6 +2678,12 @@ packages:
       mlly: 1.2.0
       pathe: 1.1.0
     dev: true
+
+  /pnpm/8.6.10:
+    resolution: {integrity: sha512-EBlPdgrAqmIDK6lflNm8M4lueWGM4PKJIDngt6vJ1+fmzh3e0482tg52nUjiuGvkzZ2sngA181GLqknXhAHgIg==}
+    engines: {node: '>=16.14'}
+    hasBin: true
+    dev: false
 
   /postcss-import/14.1.0_postcss@8.4.21:
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}

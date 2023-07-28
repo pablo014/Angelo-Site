@@ -234,12 +234,15 @@ const scrollIntoView = (id: string) => {
                       <slide :index="1">
                           <div class="flex flex-col justify-center p-5">
                               <img src="../assets/Knuckle_Sandwich.png" class="slideImg" />
-                              <div class="bg-black">
+                              <div class="bg-black pb-5">
                                   <h1 class="py-4">Knuckle Sandwich</h1>
                                   <div class="px-10 pb-5">
                                       <div class="text-xl">
                                           A Vue project using external libraries to add wonderful animations and improved UI/UX.
                                       </div>
+                                  </div>
+                                  <div class="hover:scale-125 transition-all duration-500">
+                                      <a href="https://github.com/pablo014/knuckle_sandwich" class="border-2 rounded-full border-white text-lg p-2">Source Code</a>
                                   </div>
                               </div>
                           </div>
@@ -247,10 +250,30 @@ const scrollIntoView = (id: string) => {
                       <slide :index="2">
                           <div class="flex flex-col justify-center p-5">
                               <img src="../assets/pokedex.png" class="slideImg" />
-                              <div class="bg-black">
+                              <div class="bg-black pb-5">
                                   <h1 class="py-4">Pokedex</h1>
                                   <div class="px-10 pb-5">
                                       <div class="text-xl">Pokedex Vite app using vue router and axios api calls</div>
+                                  </div>
+                                  <div class="hover:scale-125 transition-all duration-500">
+                                      <a href="https://github.com/pablo014/pokedex-project" class="border-2 rounded-full border-white text-lg p-2">Source Code</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </slide>
+                      <slide :index="3">
+                          <div class="flex flex-col justify-center p-5">
+                              <img src="../assets/tictactoe.jpg" class="slideImg" />
+                              <div class="bg-black pb-5">
+                                  <h1 class="py-4">3D Tic-Tac-Toe</h1>
+                                  <div class="px-10 pb-5">
+                                      <div class="text-xl">Using Advanced Javascript Array Manipulation, this 3D Tic Tac Toe game puts a new twist to the classic game you know. Aim to get 3 in a row in 3 in a row. Your moves affect what your opponent can do and vice versa. All I can say is, this isn't your dad's tic tac toe</div>
+                                  </div>
+                                  <div class="hover:scale-125 transition-all duration-500 mb-5">
+                                      <a href="https://main--radiant-jelly-373b25.netlify.app/" class="border-2 rounded-full border-white text-lg p-2">Live Site</a>
+                                  </div>
+                                  <div class="hover:scale-125 transition-all duration-500">
+                                      <a href="https://github.com/pablo014/pokedex-project" class="border-2 rounded-full border-white text-lg p-2">Source Code</a>
                                   </div>
                               </div>
                           </div>

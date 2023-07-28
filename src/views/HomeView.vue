@@ -3,6 +3,7 @@ import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import RadialProgress from "vue3-radial-progress";
 import { useMediaQuery } from '@vueuse/core';
+import { ref } from 'vue';
 
 interface Skill {
     name: string,
@@ -45,6 +46,10 @@ const skills: Array<Skill> = [
         knowledge: 9,
     },
     {
+        name: "TypeScript",
+        knowledge: 9,
+    },
+    {
         name: "CSS",
         knowledge: 9,
     },
@@ -59,8 +64,57 @@ const skills: Array<Skill> = [
     {
         name: "React",
         knowledge: 6,
-    }
+    },
 ]
+const backendSkills = [
+    {
+        name: 'NodeJS',
+        knowledge: 8,
+    },
+    {
+        name: 'MongoDB',
+        knowledge: 7,
+    },
+    {
+        name: 'Express',
+        knowledge: 7,
+    },
+]
+const toolSkills = [
+    {
+        name: 'Visual Studio Code',
+        knowledge: 8,
+    },
+    {
+        name: 'Netlify',
+        knowledge: 8,
+    },
+    {
+        name: 'Jest',
+        knowledge: 8,
+    },
+    {
+        name: 'ESLint',
+        knowledge: 8,
+    },
+    {
+        name: 'NPM',
+        knowledge: 8,
+    },
+    {
+        name: 'Yarn',
+        knowledge: 6,
+    },
+    {
+        name: 'Docker',
+        knowledge: 4,
+    },
+    {
+        name: 'Kubernetes',
+        knowledge: 4,
+    },
+]
+const showSkill = ref('skills');
 const headerList = [
     {
         name: 'Home',
@@ -120,15 +174,42 @@ const scrollIntoView = (id: string) => {
           <div id="skills" class="py-40">
               <div class="sm:mx-10 mx-4">
                   <h1>Skills</h1>
-                  <div class="flex flex-wrap sm:text-xl">
-                      <RadialProgress
-                          class="m-5 sm:m-10 hover:scale-125 transition-all duration-500 z-10"
-                          v-for="skill in skills"
-                          :diameter="isMobile ? 130 : 200"
-                          :completed-steps="skill.knowledge"
-                          :total-steps="10">
-                          {{ skill.name }}
-                      </RadialProgress>
+                  <div>
+                      <div class="flex items-center justify-center">
+                          <button class="border-2 rounded-full border-white text-lg w-40 mx-4 hover:scale-125 transition-all duration-500" @click="showSkill = 'skills'">Frontend</button>
+                          <button class="border-2 rounded-full border-white text-lg w-40 mx-4 hover:scale-125 transition-all duration-500" @click="showSkill = 'backend'">Backend</button>
+                          <button class="border-2 rounded-full border-white text-lg w-40 mx-4 hover:scale-125 transition-all duration-500" @click="showSkill = 'tools'">Tools</button>
+                      </div>
+                      <div class="flex flex-wrap sm:text-xl" v-if="showSkill === 'skills'">
+                          <RadialProgress
+                              class="m-5 sm:m-10 hover:scale-125 transition-all duration-500 z-10"
+                              v-for="skill in skills"
+                              :diameter="isMobile ? 130 : 200"
+                              :completed-steps="skill.knowledge"
+                              :total-steps="10">
+                              {{ skill.name }}
+                          </RadialProgress>
+                      </div>
+                      <div class="flex flex-wrap sm:text-xl" v-if="showSkill === 'backend'">
+                          <RadialProgress
+                              class="m-5 sm:m-10 hover:scale-125 transition-all duration-500 z-10"
+                              v-for="skill in backendSkills"
+                              :diameter="isMobile ? 130 : 200"
+                              :completed-steps="skill.knowledge"
+                              :total-steps="10">
+                              {{ skill.name }}
+                          </RadialProgress>
+                      </div>
+                      <div class="flex flex-wrap sm:text-xl" v-if="showSkill === 'tools'">
+                          <RadialProgress
+                              class="m-5 sm:m-10 hover:scale-125 transition-all duration-500 z-10"
+                              v-for="skill in toolSkills"
+                              :diameter="isMobile ? 130 : 200"
+                              :completed-steps="skill.knowledge"
+                              :total-steps="10">
+                              {{ skill.name }}
+                          </RadialProgress>
+                      </div>
                   </div>
               </div>
               <div class="wave-prim">

@@ -328,7 +328,24 @@ const scrollIntoView = (id: string) => {
                               </div>
                           </div>
                       </slide>
-                      <slide :index="2">
+                    <slide :index="2">
+                      <div class="flex flex-col justify-center p-5">
+                        <img src="../assets/elena-site.png" class="slideImg" />
+                        <div class="bg-black pb-5">
+                          <h1 class="py-4">Elena Seeley Portfolio</h1>
+                          <div class="px-10 pb-5">
+                            <div class="text-xl">A portfolio website for a project manager and communications major using Vue.js</div>
+                          </div>
+                          <div class="hover:scale-125 transition-all duration-500 mb-5">
+                            <a href="https://shimmering-fairy-c06384.netlify.app/" class="border-2 rounded-full border-white text-lg p-2">Live Site</a>
+                          </div>
+                          <div class="hover:scale-125 transition-all duration-500">
+                            <a href="https://github.com/pablo014/elena-site" class="border-2 rounded-full border-white text-lg p-2">Source Code</a>
+                          </div>
+                        </div>
+                      </div>
+                    </slide>
+                      <slide :index="3">
                           <div class="flex flex-col justify-center p-5">
                               <img src="../assets/pokedex.png" class="slideImg" />
                               <div class="bg-black pb-5">
@@ -342,7 +359,7 @@ const scrollIntoView = (id: string) => {
                               </div>
                           </div>
                       </slide>
-                      <slide :index="3">
+                      <slide :index="4">
                           <div class="flex flex-col justify-center p-5">
                               <img src="../assets/tictactoe.jpg" class="slideImg" />
                               <div class="bg-black pb-5">
